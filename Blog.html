@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenGaarden</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body {
+        padding-top: 56px;
+      }
+      .chat-box {
+        height: 400px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      .chat-message {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+      }
+      .chat-message.sent {
+        align-items: flex-end;
+      }
+      .profile {
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+      }
+      .message-content {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        font-size: 0.9em;
+        max-width: 80%;
+        position: relative;
+      }
+      .status-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .online {
+        background-color: green;
+      }
+      .offline {
+        background-color: red;
+      }
+      .message-actions {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .action-btn {
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        font-size: 0.8em;
+        color: #007bff;
+      }
+      .dropdown-menu {
+        min-width: 120px;
+      }
+      .container {
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"> <img src="img/th-removebg-preview.png" alt="GreenGarden" height="30" /> </a>GreenGarden
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="Service.html">Service</a></li>
+            <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Konten Chat -->
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <div class="d-flex justify-content-between align-items-center">
+                <span>Comentar</span>
+              </div>
+            </div>
+            <div class="card-body chat-box" id="chatBox"></div>
+            <div class="card-footer">
+              <div class="mb-2">
+                <label for="profileInput" class="form-label">Profil Anda:</label>
+                <input type="text" id="profileInput" class="form-control form-control-sm" placeholder="Nama Anda" value="Pengguna 1" />
+              </div>
+
+              <div class="input-group">
+                <input type="text" id="chatInput" class="form-control form-control-sm" placeholder="Ketik pesan..." />
+                <button id="sendBtn" class="btn btn-primary btn-sm">Kirim</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Event listener
+      document.getElementById("sendBtn").addEventListener("click", function () {
+        const chatInput = document.getElementById("chatInput");
+        const profileInput = document.getElementById("profileInput");
+        const chatBox = document.getElementById("chatBox");
+        const message = chatInput.value;
+        const profileName = profileInput.value;
+
+        if (message.trim() !== "") {
+          const userStatus = Math.random() > 0.5 ? "online" : "offline";
+
+          const messageDiv = document.createElement("div");
+          messageDiv.classList.add("chat-message");
+          messageDiv.classList.add("sent");
+
+          messageDiv.innerHTML = `
+                    <div class="profile">
+                      <span class="status-dot ${userStatus}"></span>
+                      ${profileName}
+                    </div>
+                    <div class="message-content">
+                      ${message}
+                    </div>
+                `;
+
+          chatBox.appendChild(messageDiv);
+
+          chatBox.scrollTop = chatBox.scrollHeight;
+
+          chatInput.value = "";
+        }
+      });
+    </script>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

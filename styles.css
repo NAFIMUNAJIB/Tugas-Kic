@@ -1,0 +1,195 @@
+.navbar {
+  padding: 1rem 0;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #28a745;
+}
+
+#jumbotron-1 {
+  background: url("img/Images/Background-1.png") no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#jumbotron-1 .container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+#jumbotron-1 h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+#jumbotron-1 p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+}
+
+#jumbotron-1 a {
+  font-size: 1.25rem;
+  padding: 15px 30px;
+}
+
+/* Jumbotron 2 Customization (Why Should We) */
+#jumbotron-2 {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+#jumbotron-2 h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#jumbotron-2 p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #28a745;
+}
+
+h4 {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Custom styling for images */
+.icon img {
+  width: 100px; /* Adjust as needed */
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-bg {
+  background-image: url("img/Images/Background-3.jpeg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+.section-content {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.section-bg h2,
+.section-bg h4 {
+  color: white;
+  font-weight: bold;
+}
+
+.services-section {
+  padding: 50px 0;
+}
+.service-card img {
+  height: 200px;
+  object-fit: cover;
+}
+.custom-section {
+  background-image: url("img/Images/Background-2.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.custom-section h2,
+.custom-section h4 {
+  color: white;
+  font-weight: bold;
+}
+
+.service-card {
+  background-color: #343a40;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+.pricing-card {
+  background-color: #2e7d32;
+  color: #ffffff;
+  border: 1px solid #1b5e20;
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.pricing-card h3 {
+  margin-bottom: 1rem;
+}
+.pricing-card .price {
+  font-size: 1.5rem;
+  color: #c8e6c9;
+  margin-bottom: 1rem;
+}
+.contact-section {
+  background-color: rgba(0, 0, 255, 0.507);
+  padding: 2rem;
+  text-align: center;
+}
+.contact-section img.person-image {
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.contact-section p {
+  margin-bottom: 0.5rem;
+}
+.contact-section a img {
+  width: 32px;
+  height: 32px;
+  margin: 0 0.5rem;
+}
+.footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 1rem 0;
+}
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.body {
+  padding-top: 80px;
+}
+section {
+  padding-top: 5rem;
+}
